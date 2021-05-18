@@ -1,35 +1,14 @@
-import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faGem from '@fortawesome/fontawesome-free-regular/faGem'
 import React from "react";
 import Link from "next/link";
-import styles from "../../styles/Home.module.css";
 
 export const BlogNav = () => (
-    <header id="header">
-        <div className="logo">
-            <span className="icon fa-diamond"></span>
-        </div>
-        <div className="content">
-            <div className="inner">
-                <h1>2021 Q1 Blog</h1>
-                <p className={styles.description}>
 
-                    <code className={styles.code}>Explore 2021 Q1 hot features</code>
-                </p>
-                <faGem/>
-            </div>
-        </div>
 
         <nav>
             <ul>
+              
                 <li>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/post/about">
+                    <Link href="/post/about" >
                         <a>About</a>
                     </Link>
                 </li>
@@ -95,8 +74,7 @@ export const BlogNav = () => (
 
         </nav>
 
-    </header>
-)
+ )
 
  
 
