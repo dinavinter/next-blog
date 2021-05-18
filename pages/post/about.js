@@ -1,8 +1,7 @@
 import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import PostLayout,{withPostLayout} from "../../components/PostLayout";
-import Image from 'next/image'
-
+ 
 function About() {
     return <PostLayout><Container fluid="md">
         <Row>
@@ -15,7 +14,7 @@ function About() {
                 </div>
             </Col>
             <Col>
-                <Image width="640" height="480" src={'/images/frank.svg'} alt="Italian Trulli"/>
+                <img width="640" height="480" src={'/images/frank.svg'} alt="Italian Trulli"/>
             </Col>
         </Row>
     </Container>

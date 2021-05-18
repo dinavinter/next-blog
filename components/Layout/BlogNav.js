@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faGem from '@fortawesome/fontawesome-free-regular/faGem'
 import React from "react";
-import Link from "next";
+import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 
 export const BlogNav = () => (
@@ -17,27 +17,84 @@ export const BlogNav = () => (
 
                     <code className={styles.code}>Explore 2021 Q1 hot features</code>
                 </p>
-                <faGem />
+                <faGem/>
             </div>
-        </div> 
-        
-            <nav>
-                <ul>
-                    <li><a href="/post/about"> About </a ></li>
-                    <li><a href="/post/groups">Groups</a></li>
-                    <li><a href="/post/captcha">Captcha</a></li>
-                    <li><a href="/post/consent">Consent</a></li>
-                    <li><a href="/post/idx">IDX</a></li>
-                    <li><a href="/post/ato">ATO</a></li>
-                    <li><a href="/post/nss">NSS</a></li>
-                    <li><a href="/post/oauth">OAuth</a></li>
-                    <li><a href="/post/liteUi">Lite</a></li>
-                    <li><a href="/post/gai">GAI</a></li>
-                    <li><a href="/post/fido">Fido</a></li>
+        </div>
 
-                </ul>
-            </nav>
-       
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">
+                        <a>Home</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/about">
+                        <a>About</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="post/groups">
+                        <a>Groups</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/captcha">
+                        <a>Captcha</a>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link href="/post/idx">
+                        <a>IDX</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/gai">
+                        <a>GAI</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/fiddo">
+                        <a>Fido</a>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link href="/post/ato">
+                        <a>ATO</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/nss">
+                        <a>NSS</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/oauth">
+                        <a>OAuth</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/consent">
+                        <a>Consent</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/idx">
+                        <a>IDX</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/post/liteUi">
+                        <a>Lite</a>
+                    </Link>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </header>
 )
 

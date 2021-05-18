@@ -2,11 +2,14 @@
   "name": "next-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dinavinter.github.io/next-blog/",
   "scripts": {
-    "dev": "next dev",
+    "dev" : "next",
     "build": "next build",
-    "start": "next start",
+    "preexport": "npm run build",
     "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out",
     "clean": "rimraf node_modules/.cache out",
     "touchnojekyll": "fsutil file createnew out/.nojekyll 0",
     "deploy": "npm run clean && next build && next export && npm run touchnojekyll && gh-pages -d out -t true"
@@ -22,6 +25,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "sass": "1.26.3"
   },
   "license": "MIT",

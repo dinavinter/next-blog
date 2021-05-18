@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-let close =<a href={"/"} > <div className="close" ></div></a>;
+let close =  <Link href="/">
+    <div className={"close"}/>
+</Link>;
 
 const PostLayout = (props) => {
     const [loaded, setLoaded] = useState(false)
