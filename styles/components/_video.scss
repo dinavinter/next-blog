@@ -1,0 +1,216 @@
+#video_box{
+  float:left;
+}
+
+
+.video_overlays {
+  position:relative;
+  float:left;
+  width:800px;
+  min-height:500px;
+  z-index:200000;
+  max-width: 100%;
+  background-color: transparentize(_palette(bg), 0.15);
+  border-radius: _size(border-radius);
+  opacity: 0;
+
+  &.timeout {
+    display: none;
+  }
+
+  &.active.timeout {
+    @include vendor('transform', 'translateY(0)');
+    opacity: 1;
+  }
+
+  &.active {
+    display: block !important;
+  }
+
+
+
+}
+
+.minimize {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  text-indent: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:before {
+    @include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background-position: center;
+    background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="2" y1="2" x2="2" y2="2" /><line x1="22" y1="2" x2="2" y2="2" /></svg>');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &:before {
+      background-color: _palette(border-bg);
+    }
+  }
+
+  &:active {
+    &:before {
+      background-color: _palette(border-bg-alt);
+    }
+  }
+}
+.maximize {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  text-indent: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:before {
+    @include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background-position: center;
+    background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" zoomAndPan="disable"><style>line { stroke: #{_palette(border)}; stroke-width: 1; }</style><line x1="18" y1="2" x2="18" y2="2" /><line x1="22" y1="2" x2="2" y2="2" /></svg>');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &:before {
+      background-color: _palette(border-bg);
+    }
+  }
+
+  &:active {
+    &:before {
+      background-color: _palette(border-bg-alt);
+    }
+  }
+}
+
+
+.figure {
+  max-width:64rem;
+  width:100%;
+  max-height:30.875rem;
+  height:100%;
+  margin:1.25rem auto;
+  padding:1.051%;
+  background-color:#666;
+}
+
+.controls {
+  width:100%;
+  height:8.0971659919028340080971659919028%; /* of figure's height */
+  position:relative;
+}
+.controls[data-state=hidden] {
+  display:none;
+}
+
+.controls[data-state=visible] {
+  display:block;
+}
+
+.controls > * {
+  float:left;
+  width:3.90625%;
+  height:100%;
+  margin-left:0.1953125%;
+  display:block;
+}
+
+.controls > *:first-child {
+  margin-left:0;
+}
+
+.controls .progress {
+  cursor:pointer;
+  width:75.390625%;
+}
+
+.controls button {
+  border:none;
+  cursor:pointer;
+  background:transparent;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.controls button:hover, .controls button:focus {
+  opacity:0.5;
+}
+
+.controls button[data-state="play"] {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
+}
+
+.controls button[data-state="pause"] {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAA ... ');
+}
+@media screen and (max-width:64em) {
+  figure {
+    padding-left:0;
+    padding-right:0;
+    height:auto;
+  }
+
+  .controls {
+    height:1.876rem;
+  }
+}
+
+@media screen and (max-width:42.5em) {
+  .controls {
+    height:auto;
+  }
+
+  .controls > * {
+    display:block;
+    width:16.6667%;
+    margin-left:0;
+    height:2.5rem;
+    margin-top:2.5rem;
+  }
+
+  .controls .progress {
+    position:absolute;
+    top:0;
+    width:100%;
+    float:none;
+    margin-top:0;
+  }
+
+  .controls .progress progress {
+    width:98%;
+    margin:0 auto;
+  }
+
+  .controls button {
+    background-position:center center;
+  }
+}
