@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../Post";
+import Post from "../../components/Post"
  
 export default function IDX() {
     return <Post  title={'IDX'} video={'InDI06Ygnto'} >

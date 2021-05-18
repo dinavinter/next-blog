@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../Post";
+import Post from "../../components/Post"
 
 export default function Fido() {
     return <Post  title={'Fido'} video={'QgPriWpnMWM'} >

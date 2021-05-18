@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../Post";
+import Post from "../../components/Post"
 
 export default function OAuth() {
     return <Post  title={'OAuth Story'} video={'Txx2XcJyMY8'} >

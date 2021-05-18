@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {GigyaContext} from "./context"
-import AccountSettingsLayout from "../PostLayout";
-
+ 
 export function GigyaProvider({domain, apiKey, children}) {
     const [isLoggedIn, setIsLoggedIn] = useState( false);
     const [gigya, setGigya] = useState(  );
