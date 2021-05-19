@@ -65,7 +65,7 @@ export const BlogNav = () => (
                     </Link>
                 </li>
                 <li>
-                    <Link href="/post/liteUi">
+                    <Link href="/post/lite">
                         <a>Lite</a>
                     </Link>
                 </li>
