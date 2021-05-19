@@ -2,10 +2,10 @@ import React from "react";
 import Post from "../../components/Post"
 
 export default function ATO() {
-    return <Post  title={'ATO Dashboard'} video={'QgPriWpnMWM'} >
+    return <Post  title={'ATO Dashboard'} video={'80AeL0m0X8s'} >
 
-        <span className={"center align-center"}   ><h1 className="minor align-center">We want to see what your ATO is doing </h1></span>
-        <span><h3 className="center align-center minor">We know you have it, we want to see!</h3></span>
+        <span className={"center align-center"}   ><h1 className="minor align-center">Do you realy protect me? </h1></span>
+        <span><h3 className="center align-center minor">I want to see!</h3></span>
 
     </Post>
 

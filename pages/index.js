@@ -4,7 +4,7 @@ import {BlogNav} from "../components/Layout/BlogNav";
 import dynamic from "next/dynamic";
 import React from "react";
 import faGem from "@fortawesome/fontawesome-free-regular/faGem";
-
+import config from '/config'
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -30,7 +30,7 @@ export default function Home() {
             </Head>
 
 
-            <main className={styles.main}>
+            <main  className={styles.main}>
 
                 <h1 className={styles.title}>
                     Welcome to <a href="https://nextjs.org">2021 Q2</a>
@@ -63,10 +63,10 @@ export default function Home() {
                 >
                     Powered by{' '}
                     <span className={styles.logo}>
-            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
+            <img src={`${config.baseurl}/>/vercel.svg`} alt="Vercel Logo" width={72} height={16}/>
           </span>
                 </a>
-            </footer>
+            </footer> 
         </div>
     )
 }
