@@ -7,6 +7,6 @@ const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
     assetPrefix:config.assetPrefix,
-    pathPrefix:config.baseurl
+    basePath:config.baseurl
 
 }

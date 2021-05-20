@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 export const BlogNav = () => (
 
 
@@ -13,7 +12,7 @@ export const BlogNav = () => (
                     </Link>
                 </li>
                 <li>
-                    <Link href="post/groups">
+                    <Link href="/post/groups">
                         <a>Groups</a>
                     </Link>
                 </li>
@@ -58,12 +57,7 @@ export const BlogNav = () => (
                     <Link href="/post/consent">
                         <a>Consent</a>
                     </Link>
-                </li>
-                <li>
-                    <Link href="/post/idx">
-                        <a>IDX</a>
-                    </Link>
-                </li>
+                </li> 
                 <li>
                     <Link href="/post/lite">
                         <a>Lite</a>
