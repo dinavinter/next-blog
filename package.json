@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://dinavinter.github.io/next-blog/",
   "scripts": {
-    "dev" : "next",
+    "dev": "next",
     "build": "next build",
     "preexport": "npm run build",
     "export": "next export",
@@ -19,6 +19,7 @@
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "10.2.0",
     "next-page-transitions": "^1.0.0-beta.2",

@@ -1,0 +1,29 @@
+.page {
+  @include vendor('transform', 'translateY(0.25rem)');
+  @include vendor('transition', (
+          'opacity #{_duration(page)} ease-in-out',
+          'transform #{_duration(page)} ease-in-out'
+  ));
+  @include padding(2.5rem, 2.5rem, (2rem, 0, 1rem, 0));
+  opacity: 0;
+
+  &.page-transition-enter {
+    display: none;
+  }
+
+  &.page-transition-exit {
+    opacity: 1;
+    display: block !important;
+  }
+  &.page-transition-enter-active {
+    @include vendor('transform', 'translateY(0)');
+    opacity: 1;
+  }
+
+  &.active {
+    display: block !important;
+  }
+
+
+
+}

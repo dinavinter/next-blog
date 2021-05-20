@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {BlogNav} from "../components/Layout/BlogNav";
-import dynamic from "next/dynamic";
 import React from "react";
-import faGem from "@fortawesome/fontawesome-free-regular/faGem";
-import config from '/config'
+import {Motion} from "../components/Motion";
+
 
 export default function Home() {
     return (
@@ -30,31 +29,33 @@ export default function Home() {
             }
           `}</style>
                 </Head>
- 
+
                 <div id="wrapper">
                     <h1 className={styles.title}>
                         Welcome to <a
                         href="https://www.youtube.com/watch?v=QgPriWpnMWM&list=PLgZszgjqISjYCCie4kUkclMr5dwMsci-0">2021
                         Q2</a>
                     </h1>
+                    <Motion>
+                        <header id="header">
 
-                    <header id="header">
-                        <div className="logo">
-                            <span className="icon fa-diamond"></span>
-                        </div>
-                        <div className="content">
-                            <div className="inner">
-                                <h1>2021 Q1 Blog</h1>
-                                <p className={styles.description}>
-
-                                    <code className={styles.code}>Explore 2021 Q1 hot features</code>
-                                </p>
-                                <faGem/>
+                            <div className="logo">
+                                <span className="icon fa-diamond"></span>
                             </div>
-                        </div>
-                        <BlogNav/>
-                    </header>
+                            <div className="content">
+                                <div className="inner">
+                                    <h1>2021 Q1 Blog</h1>
+                                    <p className={styles.description}>
 
+                                        <code className={styles.code}>Explore 2021 Q1 hot features</code>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <BlogNav/>
+                        </header>
+                    </Motion>
 
                 </div>
 

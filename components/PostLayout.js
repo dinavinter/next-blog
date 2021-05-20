@@ -3,27 +3,19 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import styles from "../styles/Home.module.css";
 import {BlogNav} from "./Layout/BlogNav";
+import {motion} from "framer-motion";
 
 let close = <Link href="/">
     <div className={"close"}/>
 </Link>;
 
+ 
+ 
 const PostLayout = (props) => {
-    const [loaded, setLoaded] = useState(false)
-    const {pageTransitionReadyToEnter, children} = props
+    const [loaded, setLoaded] = useState(true)
+    const {  children} = props
 
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            pageTransitionReadyToEnter()
-            setLoaded(true)
-        }, 2000)
-        return () => {
-            clearTimeout(timeoutId)
-        }
-    }, [pageTransitionReadyToEnter])
-
-    if (!loaded) return null
-
+ 
     return (
         <div id="main" style={loaded ? {display: 'flex'} : {display: 'none'}}> 
                     {children}
@@ -35,18 +27,9 @@ const PostLayout = (props) => {
 
     )
 }
+ 
 
-PostLayout.propTypes = {
-    pageTransitionReadyToEnter: PropTypes.func,
-}
-
-PostLayout.defaultProps = {
-    pageTransitionReadyToEnter: () => {
-    },
-}
-
-PostLayout.pageTransitionDelayEnter = true
-
+ 
 export default PostLayout;
 
 export function withPostLayout(Component) {
