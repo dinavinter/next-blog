@@ -2,12 +2,15 @@ import React from "react";
 import Post from "../../components/Post"
 
 export default function NSS() {
-    return <Post  title={'NSS'} video={'OEoY6Iv4YoI'} >
-
-        <span className={"center align-center"}   ><h1 className="minor align-center">NSS UI builder</h1></span>
-        <span><h3  >We want our product to design the screensets</h3></span>
-        <span><h3  >Same look & feel between design and mobile</h3></span>
-
+    return <Post  
+        title={'NSS'} 
+        video={'OEoY6Iv4YoI'}
+        text={[
+            {text: 'NSS UI builder', title: true},
+            {text: 'We want our product to design the screensets', speak: true},
+            {text: 'Same look & feel between design and mobile', speak: true},
+        ]}>
+ 
     </Post>
 
 }

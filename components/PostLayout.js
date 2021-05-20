@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from "../styles/Home.module.css";
 import {BlogNav} from "./Layout/BlogNav";
 import {motion} from "framer-motion";
+import {Col} from "react-bootstrap";
 
 let close = <Link href="/">
     <div className={"close"}/>

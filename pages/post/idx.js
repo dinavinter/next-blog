@@ -2,11 +2,13 @@ import React from "react";
 import Post from "../../components/Post"
  
 export default function IDX() {
-    return <Post  title={'IDX'} video={'InDI06Ygnto'} >
-       
-        <span className={"center align-center"}   ><h1 className="minor align-center">Better scheduling options</h1></span> 
-        <span ><h3>As an admin I wish I could schedule the job for Monday of each month...</h3></span>
-      
+    return <Post  
+        title={'IDX'} 
+        video={'InDI06Ygnto'}
+        text={[
+            {text: 'Better scheduling options', title: true},
+            {text: ' I wish I could schedule a sync job for Monday of each month...', speak: true},
+        ]}> 
     </Post>
 
 }

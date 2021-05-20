@@ -2,11 +2,15 @@ import React from "react";
 import Post from "../../components/Post"
 
 export default function GAI() {
-    return <Post  title={'Consent'} video={'VWMUd4ouTTA'} >
+    return <Post  
+        title={'Consent'} 
+        video={'VWMUd4ouTTA'}
+        text={[
+            {text: 'No downtime please!', title: true},
+            {text: 'Something is better then nothing!', speak: true},
+        ]}>
 
-        <span className={"center align-center"}   ><h1 className="minor align-center">No downtime please! </h1></span>
-        <span><h3  > Something is better then nothing!(</h3></span>
-
+ 
     </Post>
 
 }

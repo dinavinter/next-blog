@@ -33,7 +33,7 @@
 	@return val($size, $keys...);
 }
 
-$production: false ;
+$production: true ;
 $base-path: ''  ;
 
 @if $production {

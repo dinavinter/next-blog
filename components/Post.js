@@ -2,9 +2,10 @@ import React, {useState} from "react";
 import ReactPlayer from "react-player";
 import PostLayout from "../components/PostLayout";
 import {Motion} from "./Motion";
-  
+import {PostText} from "./PostText";
 
-export default function Post({children, video, title}) {
+
+export default function Post({children, video, text}) {
 
     const [active, setActive] = useState('text')
     let goToVideo = <div className={"minimize"} onClick={() => {
@@ -21,10 +22,7 @@ export default function Post({children, video, title}) {
                 <div id={`video-text`}
                      className={`left align-left video_overlays ${active === 'text' ? 'active' : ''} timeout`}
                      style={{display: textDisplay, 'verticalAlign': "center"}}>
-                    {/*<TextLoop  springConfig={{ stiffness: 200, damping: 10 }} mask={true} interval={2000} >*/}
-                    {children}
-                    {/*</TextLoop>*/}
-                    {/*{goToVideo}*/}
+                    <PostText text={text}/>
                 </div>
 
             </Motion>
