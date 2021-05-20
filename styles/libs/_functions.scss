@@ -32,3 +32,15 @@
 @function _size($keys...) {
 	@return val($size, $keys...);
 }
+
+$production: false ;
+$base-path: ''  ;
+
+@if $production {
+	$base-path: '/next-blog';
+}
+
+
+@function localPath($path) {
+	@return url($base-path + $path) ;
+}

@@ -25,20 +25,11 @@ const PostLayout = (props) => {
     if (!loaded) return null
 
     return (
-        <div id="main" style={loaded ? {display: 'flex'} : {display: 'none'}}>
-
-            <main className={"main"}>
-
-                <article
-                    className={'active timeout'}
-                >
+        <div id="main" style={loaded ? {display: 'flex'} : {display: 'none'}}> 
                     {children}
-                    {close}
-                </article>
-            </main>
-            <header id="header">
-                <BlogNav/>
-
+                    {close} 
+             <header id="header">
+                <BlogNav/> 
             </header>
         </div>
 

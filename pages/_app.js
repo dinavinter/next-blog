@@ -1,37 +1,44 @@
 import '../styles/globals.css'
-import   '../styles/main.scss'
-import { PageTransition } from 'next-page-transitions'
+import '../styles/main.scss'
+import {PageTransition} from 'next-page-transitions'
 import Loader from '../components/Loader'
+
 const TIMEOUT = 400
 
 import React from "react";
 import {withBoomIdp} from "../components/gigya/boomBuyIdp";
 import {Head, Html} from "next/document";
 
-function MyApp({ Component, pageProps }) { 
-  return    <div  > 
-    {typeof window === 'undefined' ? null : <Component {...pageProps} />}
-  </div>
+function MyApp({Component, pageProps}) {
+    return <div>
+        {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+    </div>
 
 }
 
-function AppWithTransition({ Component, pageProps }){
- return <>
-     
-         <PageTransition
-        timeout={TIMEOUT}
-        classNames="page-transition"
-        loadingComponent={<Loader />}
-        loadingDelay={500}
-        loadingTimeout={{
-          enter: TIMEOUT,
-          exit: 0,
-        }}
-        loadingClassNames="loading-indicator"
-    >
-      <Component {...pageProps} />
-    </PageTransition>
-    <style jsx global>{`
+function AppWithTransition({Component, pageProps}) {
+    return <>
+
+        <PageTransition
+            timeout={TIMEOUT}
+            classNames="page-transition"
+            loadingComponent={<Loader/>}
+            loadingDelay={500}
+            loadingTimeout={{
+                enter: TIMEOUT,
+                exit: 0,
+            }}
+            loadingClassNames="loading-indicator"
+        >
+            <div className={`body`}>
+                <div id="wrapper">
+                    <Component {...pageProps} />
+                </div>
+                <div id="bg"/>
+
+            </div>
+        </PageTransition>
+        <style jsx global>{`
         .page-transition-enter {
           opacity: 0;
           transform: translate3d(0, 20px, 0);
@@ -58,7 +65,7 @@ function AppWithTransition({ Component, pageProps }){
           transition: opacity ${TIMEOUT}ms;
         }
       `}</style>
-  </>
+    </>
 
 }
 
