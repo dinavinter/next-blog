@@ -25,9 +25,9 @@ const PostLayout = (props) => {
     if (!loaded) return null
 
     return (
-        <div className={styles.container}>
+        <div id="main" style={loaded ? {display: 'flex'} : {display: 'none'}}>
 
-            <main className={styles.main}>
+            <main className={"main"}>
 
                 <article
                     className={'active timeout'}

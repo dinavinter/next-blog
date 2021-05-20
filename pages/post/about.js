@@ -14,7 +14,7 @@ function About() {
                 </div>
             </Col>
             <Col>
-                <img width="640" height="480" src={'/images/frank.svg'} alt="Italian Trulli"/>
+                <img width="640" height="480" src={`${process.env.BACKEND_URL}/images/frank.svg`} alt="Italian Trulli"/>
             </Col>
         </Row>
     </Container>

@@ -18,7 +18,7 @@ const textDisplay=active === 'text' ? 'block' : 'none';
               {/*<TextLoop  springConfig={{ stiffness: 200, damping: 10 }} mask={true} interval={2000} >*/}
                     {children}
                 {/*</TextLoop>*/}
-                {goToVideo}
+                {/*{goToVideo}*/}
             </div>
  
             <div className={`${active === 'video' ? 'active' : ''} timeout`} style={{display:textDisplay}} >
