@@ -3,7 +3,7 @@ import Post from "../../components/Post";
  
 export default function Captcha() {
     return <Post  title={'Captcha'} 
-                  video={'Txx2XcJyMY8'}
+                  video={'o7yoBMbWdOI'}
                   text={[
                       {text: 'Better conversion w/o increasing friction', title: true},
                       {text: 'Bots are registering my campaign!', speak: true},
