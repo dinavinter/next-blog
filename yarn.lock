@@ -30,7 +30,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.13.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7":
   version "7.14.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
   integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
@@ -863,6 +863,11 @@ etag@1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+event-as-promise@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/event-as-promise/-/event-as-promise-1.0.5.tgz#3e8f68b0f6ceacc8e607ca6578a1fdb08bc01b39"
+  integrity sha512-z/WIlyou7oTvXBjm5YYjfklr2d8gUWtx8b5GAcrIs1n1D35f7NIK0CrcYSXbY3VYikG9bUan+wScPyGXL/NH4A==
 
 events@^3.0.0:
   version "3.3.0"
@@ -2027,6 +2032,21 @@ react-router@5.2.0:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-say@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-say/-/react-say-2.0.1.tgz#093549a3ed81667f0869eeffc077369f957b5b71"
+  integrity sha512-jyi93q/wcNcgIGXPo3OnRGIQ8DjzZoHd3lEd29CofwEGv6K+VW0HB1AZNt56ELzysi+KsPOJh5yWexmvNWwCDg==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    classnames "^2.2.6"
+    event-as-promise "^1.0.5"
+    memoize-one "^5.1.1"
+
+react-speech-kit@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-speech-kit/-/react-speech-kit-3.0.1.tgz#8bd936adfe064be1c5a07e2992dfdfd772e80d14"
+  integrity sha512-MXNOciISanhmnxpHJkBOev3M3NPDpW1T7nTc/eGw5pO9cXpoUccRxZkmr/IlpTPbPEneDNeTmbwri/YweyctZg==
 
 react-transition-group@^2.3.1:
   version "2.9.0"
